@@ -2,7 +2,10 @@
   <th>Image</th>
   <th>Name</th>
   <th>Description</th>
-  <% @products.each do |p| %>
+  <th>Qty</th>
+  <th>Unit Price</th>
+  <tbody>
+  <% @products.each_with_index do |p, index| %>
 
   <tr>
     <td>
@@ -14,6 +17,20 @@
     <td>
       <%=p.description%>
     </td>
+    <td>
+      <%=@order_details[index].quantity%>
+    </td>
+    <td>
+      <%= humanized_money_with_symbol @order_details[index].item_price_cents/100%>
+    </td>
   </tr>
   <% end %>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="5" style="text-align: right; font-size: 1.2em; font-weight: bold">
+      Total: <%= humanized_money_with_symbol @order.total_cents / 100 %>
+    </td>
+    </tr>
+  </tfoot>
 </table>

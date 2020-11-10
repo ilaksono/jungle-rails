@@ -3,6 +3,7 @@ class OrdersController < ApplicationController
   def show
     @order = Order.find(params[:id])
     @products = get_products(params[:id])
+    @order_details = get_order_details(params[:id])
   end
 
   def create
@@ -22,11 +23,15 @@ class OrdersController < ApplicationController
 
   private
 
+  def get_order_details id
+    LineItem.where(order_id: id).order(:product_id)
+  end
+
   def get_products id
     ids = []
     order_details = LineItem.where(order_id: id)
     order_details.each { |item| ids.push item.product_id }
-    Product.where(id: ids)
+    Product.where(id: ids).order(:id)
   end
 
   def empty_cart!
