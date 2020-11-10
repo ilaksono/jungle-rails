@@ -15,3 +15,10 @@ body {
 form.button_to {
   display: inline;
 }
+
+.no-items {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.6em;
+}
