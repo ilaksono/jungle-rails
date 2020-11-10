@@ -1,0 +1,19 @@
+<table class='table'>
+  <th>Image</th>
+  <th>Name</th>
+  <th>Description</th>
+  <% @products.each do |p| %>
+
+  <tr>
+    <td>
+      <%=image_tag p.image.tiny%>
+    </td>
+    <td>
+      <%=p.name%>
+    </td>
+    <td>
+      <%=p.description%>
+    </td>
+  </tr>
+  <% end %>
+</table>
