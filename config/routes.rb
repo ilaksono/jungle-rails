@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
 
-  get '/about', to: 'about#show'
+  get '/about' => 'about#show'
+
   resource :cart, only: [:show] do
     post   :add_item
     post   :remove_item
@@ -17,6 +18,12 @@ Rails.application.routes.draw do
     resources :products, except: [:edit, :update, :show]
     resources :categories, only: [:create, :index, :new]
   end
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
