@@ -4,7 +4,7 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
   # SETUP
   before :each do
     @category = Category.create! name: 'Apparel'
-
+    @user = User.create! name:'rspec test', email:'test@test.ca', password:'password'
     10.times do |n|
       @category.products.create!(
         name:  Faker::Hipster.sentence(3),
@@ -15,15 +15,17 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
       )
     end
   end
-  scenario "they add 1 item to cart" do
+  scenario "they login" do
     # ACT
     visit root_path
-    page.all('.actions').first.click_on 'Add'
-    
+    page.click_on 'Login'
+    fill_in 'email', with: 'test@test.ca'
+    fill_in 'password', with: 'password'
+    click_on 'Submit'
     # DEBUG
     
     # VERIFY
-    expect(page).to have_content 'My Cart (1)'
+    expect(page).to have_content 'Logout'
     save_screenshot
   end
 
