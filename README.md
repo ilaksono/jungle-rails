@@ -33,7 +33,9 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Poltergeist
 
 ## Screenshots
-* testing results in tmp/capybara
+* Created by capybara
+* Run `bin/rspec spec/features` after Setup
+* Results printed to `tmp/capybara`
 
 
 ## Stretch Activities
