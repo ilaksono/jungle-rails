@@ -17,6 +17,7 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 ## Stripe Testing
 
 Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
+Can also use Card# 4242 4242 4242 4242 with any date in future & security #
 
 More information in their docs: <https://stripe.com/docs/testing#cards>
 
@@ -26,5 +27,11 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * PostgreSQL 9.x
 * Stripe
 
-## Test
-* > bundle exec rspec
+## Testing
+* rspec
+* Capybara
+* Poltergeist
+* 
+
+## Stretch Activities
+* Login Feature Spec
