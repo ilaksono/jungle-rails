@@ -10,7 +10,7 @@ RSpec.describe User, type: :model do
     end
     
     it "should not be case sensitive" do
-      @user1 = User.new(email: 'test1@test.ca', name:'asd', password:'12345678910')
+      @user1 = User.new(email: 'TEST1@test.ca', name:'asd', password:'12345678910')
       @user1.save
       @user = User.find_by(email: 'test1@test.ca')
       expect('asd').to eql(@user.name)
