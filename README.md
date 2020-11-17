@@ -31,7 +31,10 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * rspec
 * Capybara
 * Poltergeist
-* 
+
+## Screenshots
+* testing results in tmp/capybara
+
 
 ## Stretch Activities
 * Login Feature Spec
