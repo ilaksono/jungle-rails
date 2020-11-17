@@ -15,7 +15,7 @@ RSpec.feature "Login", type: :feature, js: true do
       )
     end
   end
-  scenario "they login" do
+  scenario "they log in" do
     # ACT
     visit root_path
     page.click_on 'Login'

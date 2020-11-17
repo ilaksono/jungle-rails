@@ -33,9 +33,32 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Poltergeist
 
 ## Screenshots
-* Created by capybara
-* Run `bin/rspec spec/features` after Setup
-* Results printed to `tmp/capybara`
+* !["Products_page"](https://github.com/ilaksono/jungle-rails/blob/master/docs/Products_Page.png)
+* !["Order_page"](https://github.com/ilaksono/jungle-rails/blob/master/docs/Cart_Order_Page.png)
+* !["Order-Sucess_page"](https://github.com/ilaksono/jungle-rails/blob/master/docs/Order-sucess.png)
+
+## Models
+**The following models can be found in app/models**
+* users
+* categories
+* products
+* orders
+* line_items
+
+## Controllers
+**The following controllers can be found in app/controllers**
+* about
+* carts
+* categories
+* orders
+* products
+* sessions
+* users
+
+**The following admin controllers can be found in app/controllers/admin**
+* categories
+* dashboard
+* products
 
 
 ## Stretch Activities
