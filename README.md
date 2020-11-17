@@ -35,7 +35,7 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 ## Screenshots
 * !["Products_page"](https://github.com/ilaksono/jungle-rails/blob/master/docs/Products_Page.png)
 * !["Order_page"](https://github.com/ilaksono/jungle-rails/blob/master/docs/Cart_Order_Page.png)
-* !["Order-Sucess_page"](https://github.com/ilaksono/jungle-rails/blob/master/docs/Order-sucess.png)
+* !["Order-Sucess_page"](https://github.com/ilaksono/jungle-rails/blob/master/docs/Order-success.png)
 
 ## Models
 **The following models can be found in app/models**
